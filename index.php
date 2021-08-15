@@ -43,9 +43,9 @@
   </nav>
 
 
-  <?php require 'modal/mLogin.php';?>
+  <?php //require 'modal/mLogin.php';?>
 
-  <?php require 'modal/mCadastro.php';?>
+  <?php //require 'modal/mCadastro.php';?>
 
 
 

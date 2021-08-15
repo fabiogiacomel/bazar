@@ -1,4 +1,3 @@
-<?php
   <!-- Modal Login -->
   <div class="modal" id="mLogin">
     <div class="modal-dialog">
@@ -31,4 +30,3 @@
     </div>
   </div>
   <!-- Fim Modal Login -->
-  ?>
