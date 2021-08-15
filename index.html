@@ -143,7 +143,7 @@
       <h3>R$ 10,00</h3>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Eu quero!</a>
+          <a class="nav-link active" onclick="loadDoc()">Eu quero!</a>
         </li>
       </ul>
     </div>
@@ -172,7 +172,16 @@
 <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
   <p>Unidos pelo meio ambiente!</p>
 </div>
-
+<script>
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "bd\inserir.php");
+    xhttp.send();
+  }
+  </script>
 
 </body>
 </html>
