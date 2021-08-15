@@ -31,13 +31,13 @@
       <div class="col">
         <!-- Coluna -->
         <!-- Inserir bCadastro -->
-        <?php require 'modal/bLogin.php';?>
+        <?php //require 'modal/bLogin.php';?>
       </div>
 
       <div class="col">
         <!-- Coluna -->
         <!-- Inserir bCadastro -->
-        <?php require 'modal/bCadastro.php';?>
+        <?php //require 'modal/bCadastro.php';?>
       </div>
 
   </nav>
