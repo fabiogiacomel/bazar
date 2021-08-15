@@ -5,7 +5,7 @@
 
 <?php
 echo "<table style='border: solid 1px black;'>";
- echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr><th>Firstname</th>";
+ echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th><th>Firstname</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
