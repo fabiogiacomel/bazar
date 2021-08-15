@@ -1,1 +1,1 @@
-<p>IMPORTANTE: Todos os produtos vendidos no bazar são itens usados podem estar com defeiro e foram doados pela comuidade qualquer compra é por conta e risco do comprados</p>
+<p>IMPORTANTE: Todos os produtos vendidos no bazar são itens usados podem estar com defeiro e foram doados pela comuidade qualquer compra é por conta e risco dos compradores</p>
