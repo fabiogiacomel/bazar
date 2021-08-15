@@ -20,6 +20,7 @@
 <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
   <h1>1º Bazar de Lixo Eletrônico</h1>
   <p>IMPORTANTE: Teste teste</p>
+  <p id="demo"></p>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -61,7 +62,7 @@
 			<form action="#">
 			<div class="form-group">
         
-        <label for="email" id="id1">Digite seu Email:</label>
+        <label for="email" >Digite seu Email:</label>
 				<input type="email" class="form-control" id="email">
 			</div>
 
@@ -74,8 +75,7 @@
 				<label for="pwd">Repita a senha:</label>
 				<input type="password" class="form-control" id="rpwd">
 			</div>
-      <p id="demo"></p>
-			<button type="submit" class="btn btn-primary" onclick="myFunction()">Cadastrar</button>
+			<button type="submit" class="btn btn-primary"></button>Cadastrar</button>
       	
     </form>
         </div>
@@ -157,7 +157,7 @@
       <h3>R$ 5,00</h3>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Eu quero!</a>
+          <a class="nav-link active" onclick="document.getElementById('demo').innerHTML=Date()">Eu quero!</a>
         </li>
       </ul>
     </div>
@@ -173,15 +173,6 @@
   <p>Unidos pelo meio ambiente!</p>
 </div>
 
-<script>
-  function myFunction() {
-    const inpObj = document.getElementById("id1");
-    if (!inpObj.checkValidity()) {
-      document.getElementById("demo").innerHTML = inpObj.validationMessage;
-    } else {
-      document.getElementById("demo").innerHTML = "Input OK";
-    } 
-  } 
-  </script>
+
 </body>
 </html>
