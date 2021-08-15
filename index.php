@@ -21,7 +21,8 @@
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
-    <p>IMPORTANTE: Teste teste</p>
+    <?php require 'mensagens/01.php';?>
+    
     <p id="demo"></p>
   </div>
 
