@@ -31,21 +31,21 @@
       <div class="col">
         <!-- Coluna -->
         <!-- Inserir bCadastro -->
-        <?php include 'modal/bLogin.php';?>
+        <?php require 'modal/bLogin.php';?>
       </div>
 
       <div class="col">
         <!-- Coluna -->
         <!-- Inserir bCadastro -->
-        <?php include 'modal/bCadastro.php';?>
+        <?php require 'modal/bCadastro.php';?>
       </div>
 
   </nav>
 
 
-  <?php include 'modal/mLogin.php';?>
+  <?php require 'modal/mLogin.php';?>
 
-  <?php include 'modal/mCadastro.php';?>
+  <?php require 'modal/mCadastro.php';?>
 
 
 
