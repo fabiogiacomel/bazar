@@ -13,11 +13,11 @@ if ($conn->connect_error) {
 }
 
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO pedido (idSessao,idProduto,ip) VALUES (?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO pedido (idSessao, idProduto, ip) VALUES (?, ?, ?)");
 $stmt->bind_param("iis",$idSessao, $idProduto, $ip);
 
 // set parameters and execute
-$idSessao = 123456;
+$idSessao = 123;
 $idProduto = 10;
 $ip="192.168.1.100";
 $stmt->execute();
