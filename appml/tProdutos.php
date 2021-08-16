@@ -1,5 +1,5 @@
 
-<table appml-data="produtos.js">
+<table appml-data="appml/produtos.js">
   <tr>
     <th>Customer</th>
     <th>City</th>
