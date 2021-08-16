@@ -32,9 +32,8 @@
     
     <p id="demo"></p>
   </div>
-  <?php require 'appml/dbProdutos.php';?>
-  <?php require 'mensagens/produtos/mostrarProduto.php';?>
-
+  <?php require 'appml/tProdutos.php';?>
+  
 
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
