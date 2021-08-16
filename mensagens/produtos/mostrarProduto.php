@@ -7,7 +7,9 @@
         <h3>{{preco}}</h3>
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-            <a class="nav-link active" onclick="document.getElementById('demo').innerHTML=Date()">Eu quero!</a>
+            <? # Botao desativado
+               #<a class="nav-link active" onclick="document.getElementById('demo').innerHTML=Date()">Eu quero!</a>
+            ?>
           </li>
         </ul>
       </div>
