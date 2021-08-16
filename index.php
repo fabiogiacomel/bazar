@@ -61,11 +61,9 @@
 
 
   <div class="container" style="margin-top:30px">
-    <div class="row">
 
     <?php require 'mensagens/produtos/mostrarProduto.php';?>
 
-    </div>
   </div>
 
   </div>
