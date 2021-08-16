@@ -6,7 +6,7 @@
     {"id":"4","titulo":"Placa mãe 775","img":"04.png","descricao":"Placa mãe socket 775 usada/recondicionada","preco":"R$ 20,00"},
     {"id":"5","titulo":"Memória RAM DDR 2","img":"05.png","descricao":"Memória DDR2 256 MB","preco":"R$ 5,00"},
     {"id":"6","titulo":"Cooler 775","img":"06.png","descricao":"Usado deve ser utilizado com pasta termica","preco":"R$ 15,00"},
-    {"id":"7","titulo":"Antena Ubiquiti(o Par)","img":"07.png","descricao":"Antenas doadas por um provedor","preco":"R$ 5,00"}
+    {"id":"7","titulo":"Antena Ubiquiti(o Par)","img":"07.png","descricao":"Antenas doadas por um provedor","preco":"R$ 5,00"},
     {"id":"8","titulo":"Cabo de Força (Padrão Novo)","img":"07.png","descricao":"Cabo para ligar a fonte do computador à rede elétrica","preco":"R$ 2,00"}
 ]
 }
