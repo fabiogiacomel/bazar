@@ -1,4 +1,4 @@
-<div class="col-sm-4"  appml-data="produtosObj">
+<div class="col-sm-4"  appml-data="appml/produtos.js">
     <div appml-repeat="records">    
         <h2>{{titulo}}</h2>
         <h5>{{descricao}}</h5>
