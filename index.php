@@ -66,8 +66,6 @@
 
   </div>
 
-  </div>
-
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
   <?php require 'mensagens/02.php';?>
