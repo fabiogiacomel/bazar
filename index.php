@@ -60,7 +60,7 @@
 
 
 
-  <div class="container" style="margin-top:30px">
+  <div class="container-fluid">
 
     <?php require 'mensagens/produtos/mostrarProduto.php';?>
 
