@@ -32,7 +32,7 @@
     
     <p id="demo"></p>
   </div>
-
+  <?php require 'appml/dbProdutos.php';?>
   <?php require 'appml/tProdutos.php';?>
 
 
