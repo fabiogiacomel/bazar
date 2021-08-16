@@ -12,6 +12,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
+
+<script>
+    var produtosObj = {
+    "records":[
+    {"id":"1","titulo":"Monitor","img":"01.png","descricao":"Monitores de várias marcas e modelos","preco":"R$ 25,00"},
+    {"id":"2","titulo":"HD","img":"02.png","descricao":"Capacidade 80 GB","preco":"R$ 10,00"},
+    {"id":"3","titulo":"Fonte ATX","img":"03.png","descricao":"Fonte utilizada no PC","preco":"R$ 5,00"}
+]};
+</script>
+
 <style>
     .fakeimg {
       height: 200px;
@@ -102,8 +112,7 @@
 
   <script src="js/lib.js"></script>
   <script src="js/inserirPedido.js"></script>
-  <script src="js/produtos.js"></script>
-
+  
 </body>
 
 </html>
