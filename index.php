@@ -32,7 +32,7 @@
     
     <p id="demo"></p>
   </div>
-  <?php require 'mensagens/produtos/mostrarProduto.php';?>
+
   
 
 
@@ -62,35 +62,8 @@
 
   <div class="container" style="margin-top:30px">
     <div class="row">
-      <div class="col-sm-4">
-        <h2>Monitores</h2>
-        <h5>14 polegadas (várias marcas)</h5>
-        <img src="ofertados/01.png" class="mx-auto d-block img-fluid">
-        <p>Quantidade: 21</p>
-        <h3>R$ 25,00</h3>
-        <ul class="nav nav-pills flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Eu quero!</a>
-          </li>
-        </ul>
-      </div>
 
-      <div class="col-sm-4">
-        <h2>HD 80 GB</h2>
-        <h5>Sata (várias marcas)</h5>
-        <img src="ofertados/02.png" class="mx-auto d-block img-fluid">
-        <p>Quantidade: 02</p>
-        <h3>R$ 10,00</h3>
-        <ul class="nav nav-pills flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" onclick="inserirPedido()">Eu quero!</a>
-          </li>
-        </ul>
-      </div>
-
-
-
-
+    <?php require 'mensagens/produtos/mostrarProduto.php';?>
 
     </div>
   </div>
