@@ -1,4 +1,4 @@
-<table appml-data="dataObj">
+<table appml-data="produtosObj">
   <tr>
     <th>Customer</th>
     <th>City</th>
