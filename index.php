@@ -30,6 +30,7 @@
     <p id="demo"></p>
   </div>
 
+  <?php require 'appml/tProdutos.php';?>
 
 
 
