@@ -11,12 +11,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
+  <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
+<style>
     .fakeimg {
       height: 200px;
       background: #aaa;
     }
   </style>
+
 </head>
 
 <body>
@@ -27,6 +29,20 @@
     
     <p id="demo"></p>
   </div>
+
+
+  <table appml-data="dataObj">
+  <tr>
+    <th>Customer</th>
+    <th>City</th>
+    <th>Country</th>
+  </tr>
+  <tr appml-repeat="records">
+    <td>{{CustomerName}}</td>
+    <td>{{City}}</td>
+    <td>{{Country}}</td>
+  </tr>
+</table>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="row">
