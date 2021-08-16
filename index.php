@@ -31,18 +31,7 @@
   </div>
 
 
-  <table appml-data="dataObj">
-  <tr>
-    <th>Customer</th>
-    <th>City</th>
-    <th>Country</th>
-  </tr>
-  <tr appml-repeat="records">
-    <td>{{CustomerName}}</td>
-    <td>{{City}}</td>
-    <td>{{Country}}</td>
-  </tr>
-</table>
+
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="row">
