@@ -112,7 +112,7 @@
 
   <script src="js/lib.js"></script>
   <script src="js/inserirPedido.js"></script>
-
+  <script src="js/produtos.js"></script>
 
 </body>
 
