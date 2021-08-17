@@ -64,14 +64,11 @@
 
   <div class="container-fluid">
 
-  <div class="alert alert-info alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <img src="mensagens/01.png" class="img-thumbnail">
-  </div>
+  <?php require 'mensagens/m01.php';?>
 
-    <?php require 'mensagens/produtos/mostrarProduto.php';?>
+  <?php require 'mensagens/produtos/mostrarProduto.php';?>
 
-    <?php #require 'mensagens/produtos/cardProdutos.php';?>
+  <?php #require 'mensagens/produtos/cardProdutos.php';?>
 
     
 
