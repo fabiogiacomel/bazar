@@ -62,9 +62,9 @@
 
   <div class="container-fluid">
 
-    <?php #require 'mensagens/produtos/mostrarProduto.php';?>
+    <?php require 'mensagens/produtos/mostrarProduto.php';?>
 
-    <?php require 'mensagens/produtos/cardProdutos.php';?>
+    <?php #require 'mensagens/produtos/cardProdutos.php';?>
 
     
 
