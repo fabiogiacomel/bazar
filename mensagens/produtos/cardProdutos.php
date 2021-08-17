@@ -1,5 +1,6 @@
-<div class="card row" appml-data="appml/produtos.js">
-    <div class="col" appml-repeat="records">  
+<div class="container-fluid d-flex flex-wrap">
+<div class="card" appml-data="appml/produtos.js">
+    <div appml-repeat="records">  
     <img class="card-img-top img-thumbnail mx-auto d-block img-fluid" src="ofertados/{{img}}" alt="Card image" style="width:100%">
     <div class="card-body text-center">
       <h4 class="card-title">{{titulo}}</h4>
@@ -12,3 +13,4 @@
   </div>
 </div>
   <br>
+  </div>
