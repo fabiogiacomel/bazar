@@ -1,6 +1,6 @@
 <div appml-data="appml/produtos.js">
     <div class="table table-bordered justify-content-center align-items-center" appml-repeat="records">   
-        <div class="text-center> 
+        <div class="text-center"> 
         <h2>{{titulo}}</h2>
         <img src="ofertados/{{img}}" class="img-thumbnail mx-auto d-block img-fluid">
         <p>Quantidade: 10</p>
