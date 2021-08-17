@@ -25,10 +25,10 @@
 </head>
 
 <body>
-
-<div class="alert alert-success">
-  <strong>Importante</strong> <img src="mensagens/01.png" class="img-thumbnail">
-</div>
+<div class="alert alert-info alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <img src="mensagens/01.png" class="img-thumbnail">
+  </div>
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
