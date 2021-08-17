@@ -26,6 +26,10 @@
 
 <body>
 
+<div class="alert alert-success">
+  <strong>Importante</strong> <img src="mensagens/01.jpg" class="img-thumbnail">
+</div>
+
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
     <?php require 'mensagens/01.php';?>
