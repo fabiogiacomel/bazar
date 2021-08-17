@@ -1,4 +1,4 @@
-<div class="card" style="width:400px" appml-data="appml/produtos.js">
+<div class="card" appml-data="appml/produtos.js">
     <div appml-repeat="records">  
     <img class="card-img-top img-thumbnail mx-auto d-block img-fluid" src="ofertados/{{img}}" alt="Card image" style="width:100%">
     <div class="card-body">
