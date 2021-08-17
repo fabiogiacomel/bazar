@@ -1,1 +1,2 @@
-<p>IMPORTANTE: Todos os produtos vendidos no bazar são itens usados podem estar com defeiro e foram doados pela comunidade qualquer compra é por conta e risco dos compradores</p>
+<p>IMPORTANTE: Todos os produtos vendidos no bazar são itens usados doados ao CEEP e podem estar com defeito. 
+Os compradores devem estar cientes que não é garantido que estejam funcionando.</p>
