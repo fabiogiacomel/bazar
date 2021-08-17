@@ -1,4 +1,5 @@
 <div class="card" style="width:400px" appml-data="appml/produtos.js">
+    <div appml-repeat="records">  
     <img class="card-img-top" src="ofertados/{{img}}" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">{{titulo}}</h4>
@@ -9,4 +10,5 @@
       <a href="#" class="btn btn-primary">Reservar apartir de sexta</a>
     </div>
   </div>
+</div>
   <br>
