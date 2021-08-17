@@ -3,7 +3,7 @@
         <div class="text-center"> 
         <h2>{{titulo}}</h2>
         <img src="ofertados/{{img}}" class="img-thumbnail mx-auto d-block img-fluid">
-        <p>Quantidade: 10</p>
+        <p>Quantidade: {{qtd}}</p>
         <h5>{{descricao}}</h5>
         
         <div class="alert alert-success">
