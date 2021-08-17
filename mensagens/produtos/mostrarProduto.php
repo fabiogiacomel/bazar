@@ -4,7 +4,10 @@
         <img src="ofertados/{{img}}" class="img-thumbnail mx-auto d-block img-fluid">
         <p>Quantidade: 10</p>
         <h5>{{descricao}}</h5>
-        <h3>{{preco}}</h3>
+        
+        <div class="alert alert-success">
+          <strong><h3>{{preco}}</h3></strong>
+        </div>
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
             <? # Botao desativado
