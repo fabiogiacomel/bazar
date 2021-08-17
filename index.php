@@ -27,7 +27,7 @@
 <body>
 
 <div class="alert alert-success">
-  <strong>Importante</strong> <img src="mensagens/01.jpg" class="img-thumbnail">
+  <strong>Importante</strong> <img src="mensagens/01.png" class="img-thumbnail">
 </div>
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
