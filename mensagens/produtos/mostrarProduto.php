@@ -1,5 +1,5 @@
 <div appml-data="appml/produtos.js">
-    <div class="table table-bordered" appml-repeat="records">    
+    <div class="table table-bordered justify-content-center" appml-repeat="records">    
         <h2>{{titulo}}</h2>
         <img src="ofertados/{{img}}" class="img-thumbnail mx-auto d-block img-fluid">
         <p>Quantidade: 10</p>
