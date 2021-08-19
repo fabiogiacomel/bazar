@@ -21,20 +21,11 @@
 
 <script>
 const ids = [];
-const desc = [];
 document.getElementById("ids").innerHTML = ids;
-document.getElementById("desc").innerHTML = desc;
-document.getElementById("valor").innerHTML = valor;
 
 function addCarrinho(id, desc){
   ids.push(id);
-  desc.push(desc);
-  //valor.push(valor);
-
   document.getElementById("ids").innerHTML = ids.toString();
-  document.getElementById("desc").innerHTML = desc.toString();
-  //document.getElementById("valor").innerHTML = valor.toString();
-
 }
 </script>
 
@@ -56,8 +47,6 @@ function addCarrinho(id, desc){
     <?php #require 'mensagens/01.php';?>
     
     <p id="ids"></p>
-    <p id="desc"></p>
-    <p id="valor"></p>
 
   </div>
 
