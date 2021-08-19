@@ -23,7 +23,7 @@
 const fruits = [];
 document.getElementById("carrinho").innerHTML = fruits;
 
-function addCarrinho1(id){
+function addCarrinho(id){
   fruits.push(id);
   document.getElementById("carrinho").innerHTML = fruits;
 }
