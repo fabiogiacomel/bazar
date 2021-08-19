@@ -20,12 +20,12 @@
   </script>
 
 <script>
-const id = [];
-document.getElementById("carrinho").innerHTML = id;
+const ids = [];
+document.getElementById("carrinho").innerHTML = ids;
 
 function addCarrinho(id){
-  id.push(id);
-  document.getElementById("carrinho").innerHTML = id;
+  ids.push(id);
+  document.getElementById("carrinho").innerHTML = ids;
 }
 </script>
 
