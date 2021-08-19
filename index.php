@@ -20,7 +20,7 @@
   </script>
 
 <script>
-const ids, desc, valor = [];
+const ids = [];
 document.getElementById("ids").innerHTML = ids;
 document.getElementById("desc").innerHTML = desc;
 document.getElementById("valor").innerHTML = valor;
