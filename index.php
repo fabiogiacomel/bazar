@@ -20,12 +20,20 @@
   </script>
 
 <script>
-const ids = [];
-document.getElementById("carrinho").innerHTML = ids;
+const ids, desc, valor = [];
+document.getElementById("ids").innerHTML = ids;
+document.getElementById("desc").innerHTML = desc;
+document.getElementById("valor").innerHTML = valor;
 
-function addCarrinho(id){
+function addCarrinho(id,desc,valor){
   ids.push(id);
-  document.getElementById("carrinho").innerHTML = ids;
+  desc.push(desc);
+  valor.push(valor);
+
+  document.getElementById("ids").innerHTML = ids;
+  document.getElementById("desc").innerHTML = desc;
+  document.getElementById("valor").innerHTML = valor;
+
 }
 </script>
 
@@ -46,7 +54,10 @@ function addCarrinho(id){
     <h1>1º Bazar de Lixo Eletrônico</h1>
     <?php #require 'mensagens/01.php';?>
     
-    <p id="carrinho"></p>
+    <p id="ids"></p>
+    <p id="desc"></p>
+    <p id="valor"></p>
+
   </div>
 
   
