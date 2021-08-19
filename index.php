@@ -30,9 +30,9 @@ function addCarrinho(id,desc,valor){
   desc.push(desc);
   valor.push(valor);
 
-  document.getElementById("ids").innerHTML = ids;
-  document.getElementById("desc").innerHTML = desc;
-  document.getElementById("valor").innerHTML = valor;
+  document.getElementById("ids").innerHTML = ids.toString();
+  document.getElementById("desc").innerHTML = desc.toString();
+  document.getElementById("valor").innerHTML = valor.toString();
 
 }
 </script>
