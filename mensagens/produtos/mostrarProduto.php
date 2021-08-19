@@ -12,7 +12,7 @@
         </div>
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-          <a href="#" class="btn btn-primary" onclick="addCarrinho({{id}},{{titulo}})">Reservar (Começa na sexta)</a>
+          <a href="#" class="btn btn-primary" onclick="addCarrinho({{id}})">Reservar (Começa na sexta)</a>
             <? # Botao desativado
                #<a class="nav-link active" onclick="document.getElementById('demo').innerHTML=Date()">Eu quero!</a>
             ?>
