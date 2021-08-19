@@ -13,7 +13,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
  <!-- <link href="img/ceep-touch-icon.jpg" rel="apple-touch-icon"> -->
-
+ <script>
+  function addCarrinho(id) {
+    document.getElementById("carrinho").innerHTML = id;
+  }
+  </script>
 
 <style>
     .fakeimg {
@@ -32,7 +36,7 @@
     <h1>1º Bazar de Lixo Eletrônico</h1>
     <?php #require 'mensagens/01.php';?>
     
-    <p id="demo"></p>
+    <p id="carrinho"></p>
   </div>
 
   
