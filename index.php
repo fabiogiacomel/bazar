@@ -14,10 +14,20 @@
   <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
  <!-- <link href="img/ceep-touch-icon.jpg" rel="apple-touch-icon"> -->
  <script>
-  function addCarrinho(id) {
+  function addCarrinho1(id) {
     document.getElementById("carrinho").innerHTML = id;
   }
   </script>
+
+<script>
+const fruits = [];
+document.getElementById("carrinho").innerHTML = fruits;
+
+function addCarrinho1(id){
+  fruits.push(id);
+  document.getElementById("carrinho").innerHTML = fruits;
+}
+</script>
 
 <style>
     .fakeimg {
