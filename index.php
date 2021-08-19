@@ -25,14 +25,14 @@ document.getElementById("ids").innerHTML = ids;
 document.getElementById("desc").innerHTML = desc;
 document.getElementById("valor").innerHTML = valor;
 
-function addCarrinho(id,desc,valor){
+function addCarrinho(id){
   ids.push(id);
-  desc.push(desc);
-  valor.push(valor);
+  //desc.push(desc);
+  //valor.push(valor);
 
   document.getElementById("ids").innerHTML = ids.toString();
-  document.getElementById("desc").innerHTML = desc.toString();
-  document.getElementById("valor").innerHTML = valor.toString();
+  //document.getElementById("desc").innerHTML = desc.toString();
+  //document.getElementById("valor").innerHTML = valor.toString();
 
 }
 </script>
