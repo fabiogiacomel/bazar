@@ -13,11 +13,13 @@ if ($conn->connect_error) {
 }
 
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO usuario (email,senha) VALUES (?, ?)");
+$stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha) VALUES (?, ?,? ,?)");
 $stmt->bind_param("ss", $email, $senha);
 
 // set parameters and execute
-$email = "john@example.com";
+$nome = $_POST['nome'];
+$fone = $_POST['fone'];
+$email = $_POST['email'];
 $senha = sha1("John");
 $stmt->execute();
 
