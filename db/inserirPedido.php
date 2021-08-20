@@ -70,7 +70,7 @@ $stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip) VALUES (?,
 $stmt->bind_param("iss", $idSessao, $idProduto, $ip);
 
 // set parameters and execute
-$idSessao = session_id();
+$idSessao = $a;
 //$idProduto = 10;
 $ip = $_SERVER["REMOTE_ADDR"];
 $stmt->execute();
