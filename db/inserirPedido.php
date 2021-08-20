@@ -66,13 +66,14 @@ if ($conn->connect_error) {
 }
 
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip) VALUES (?, ?, ?)");
-$stmt->bind_param("iss", $idSessao, $idProduto, $ip);
+$stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip, cookie) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("isss", $idSessao, $idProduto, $ip, $cookie);
 
 // set parameters and execute
 $idSessao = $a;
 //$idProduto = 10;
 $ip = $_SERVER["REMOTE_ADDR"];
+$cookie = $_COOKIE["PHPSESSID"];
 $stmt->execute();
 
 echo "Produto inserio no Pedido";
