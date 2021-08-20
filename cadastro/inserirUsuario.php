@@ -10,6 +10,8 @@ $nome =  $_POST['nome'];
 $fone =  $_POST['fone'];
 $email =  $_POST['email'];
 
+echo $nome, $fone, $email;
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
