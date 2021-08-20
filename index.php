@@ -40,7 +40,7 @@
 
   <?php
  // $arquivo = fopen('meuarquivo.txt','w'); if ($arquivo == false) die('Não foi possível criar o arquivo.');
-  $arquivo = fopen('ip.txt','w');
+  $arquivo = fopen('ip.txt','a+');
   $texto = $_SERVER["REMOTE_ADDR"];
   fwrite($arquivo, $texto);
   fclose($arquivo);
