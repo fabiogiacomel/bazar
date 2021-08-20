@@ -67,7 +67,7 @@ if ($conn->connect_error) {
 
 // prepare and bind
 $stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip) VALUES (?, ?, ?)");
-$stmt->bind_param("iis", $idSessao, $idProduto, $ip);
+$stmt->bind_param("iss", $idSessao, $idProduto, $ip);
 
 // set parameters and execute
 $idSessao = session_id();
