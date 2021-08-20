@@ -1,59 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <title>Bazar CEEP</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  </style>
-</head>
+<html>
 <body>
 
-<div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
-  <h1>1º Bazar de Lixo Eletrônico</h1>
-  <p>CADASTRO</p>
-</div>
-
-
-<div class="container" style="margin-top:30px">
-<form method="post" action="inserirUsuario.php" ?>>
-  
-  <div class="form-group">
-    <label for="nome">Digite seu Nome:</label>
-    <input type="text" class="form-control" id="nome">
-  </div>
-
-  <div class="form-group">
-    <label for="email">Digite seu Email:</label>
-    <input type="email" class="form-control" id="email">
-  </div>
-
-  <div class="form-group">
-    <label for="fone">Digite seu Telefone:</label>
-    <input type="text" class="form-control" id="fone">
-  </div>
-
-
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
 </form>
 
-
-
-
-</div>
-
-
-<div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
-  <p>Unidos pelo meio ambiente!</p>
-</div>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
 
 </body>
 </html>
