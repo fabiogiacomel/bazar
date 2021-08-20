@@ -49,6 +49,7 @@ $cod =  $_GET['cod'];
 // Verificamos se a acao é igual a incluir
 if ($acao == "incluir")
 {    
+  require 'db/inserirPedido.php';
    // Verificamos se cod do produto é diferente de vazio
    if ($cod != '')
    {
