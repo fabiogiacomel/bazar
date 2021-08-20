@@ -1,4 +1,9 @@
 <?php
+
+$a = session_id();
+if(empty($a)) session_start();
+echo "SID: ".SID."<br>session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
+
 $servername = "localhost";
 $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
