@@ -18,46 +18,46 @@ $id =  $_GET['id'];
 
 
 switch ($id) {
-  case 1:
+  case '1':
     $idProduto = 1;
     break;
-  case 2:
+  case '2':
     $idProduto = 2;
     break;
-  case 3:
+  case '3':
     $idProduto = 3;
     break;
-  case 4:
+  case '4':
     $idProduto = 4;
     break;
-  case 5:
+  case '5':
     $idProduto = 5;
     break;
-  case 6:
+  case '6':
     $idProduto = 6;
     break;
-  case 7:
+  case '7':
     $idProduto = 7;
     break;
-  case 8:
+  case '8':
     $idProduto = 8;
     break;
-  case 9:
+  case '9':
     $idProduto = 9;
     break;
-  case 10:
+  case '10':
     $idProduto = 10;
     break;
-  case 11:
+  case '11':
     $idProduto = 11;
     break;
-  case 12:
+  case '12':
     $idProduto = 12;
     break;
-  case 13:
+  case '13':
     $idProduto = 13;
     break;
-  case 14:
+  case '14':
     $idProduto = 14;
     break;
 }
@@ -71,14 +71,15 @@ if ($conn->connect_error) {
 }
 
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip, cookie) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("isss", $idSessao, $idProduto, $ip, $cookie);
+$stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip, cookie, data) VALUES (?, ?, ?, ?, ?)");
+$stmt->bind_param("issss", $idSessao, $idProduto, $ip, $cookie, $data);
 
 // set parameters and execute
 $idSessao = $a;
 //$idProduto = 10;
 $ip = $_SERVER["REMOTE_ADDR"];
 $cookie = $_COOKIE["PHPSESSID"];
+$data = date('d/m/Y');
 $stmt->execute();
 
 echo "Produto inserio no Pedido";
