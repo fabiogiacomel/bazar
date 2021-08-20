@@ -39,6 +39,12 @@
 <body>
 
   <?php
+ // $arquivo = fopen('meuarquivo.txt','w'); if ($arquivo == false) die('Não foi possível criar o arquivo.');
+  $arquivo = fopen('ip.txt','w');
+  $texto = $_SERVER["REMOTE_ADDR"];
+  fwrite($arquivo, $texto);
+  fclose($arquivo);
+
   session_start();
 
   $acao = $_GET['acao'];
