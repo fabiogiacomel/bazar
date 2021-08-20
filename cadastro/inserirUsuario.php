@@ -6,9 +6,9 @@ $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
-$nome =  $_GET['nome'];
-$fone =  $_GET['fone'];
-$email =  $_GET['email'];
+$nome =  $_POST['nome'];
+$fone =  $_POST['fone'];
+$email =  $_POST['email'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
