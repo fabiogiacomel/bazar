@@ -12,7 +12,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
   $nome = $_POST['fnome'];
-  if (empty($name)) {
+  if (empty($nome)) {
     echo "Nome em branco";
   } else {
     echo $nome;
