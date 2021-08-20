@@ -25,7 +25,6 @@ document.getElementById("ids").innerHTML = ids;
 
 function addCarrinho(id){
   ids.push(id);
-  document.getElementById("demo").innerHTML = ids.indexOf(id);
   document.getElementById("ids").innerHTML = ids.toString();
 }
 </script>
@@ -40,8 +39,6 @@ function addCarrinho(id){
 </head>
 
 <body>
-
-
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
