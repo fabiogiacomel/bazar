@@ -1,12 +1,13 @@
 <?php
 
-$a = session_id();
 if(empty($a)) {
   
   
   
   session_start();
 }
+$a = session_id();
+
 //echo "SID: ".SID."<br>session_id(): ".session_id()."<br>COOKIE: ".$_COOKIE["PHPSESSID"];
 
 $servername = "localhost";
@@ -15,7 +16,6 @@ $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
 $cod =  $_GET['cod'];
-
 
 switch ($cod) {
   case '1':
