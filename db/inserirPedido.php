@@ -14,10 +14,10 @@ $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
-$id =  $_GET['id'];
+$cod =  $_GET['cod'];
 
 
-switch ($id) {
+switch ($cod) {
   case '1':
     $idProduto = 1;
     break;
