@@ -40,6 +40,25 @@ function addCarrinho(id){
 
 <body>
 
+<?php
+session_start();
+
+$acao = $_GET['acao'];
+$cod =  $_GET['cod'];
+
+// Verificamos se a acao é igual a incluir
+if ($acao == "incluir")
+{    
+   // Verificamos se cod do produto é diferente de vazio
+   if ($cod != '')
+   {
+       // Se for diferente de vazio verificamos se é numérico
+       if (is_numeric($cod))
+       {    
+           // Tratamos a variavel de caracteres indevidos
+           $cod = addslashes(htmlentities($cod));
+?>
+
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
     <?php #require 'mensagens/01.php';?>
