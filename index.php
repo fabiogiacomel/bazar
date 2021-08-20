@@ -57,6 +57,9 @@ if ($acao == "incluir")
        {    
            // Tratamos a variavel de caracteres indevidos
            $cod = addslashes(htmlentities($cod));
+       }
+      }
+    }
 ?>
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
