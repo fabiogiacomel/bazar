@@ -5,7 +5,7 @@
   Nome:  <input type="text" name="fnome">
   Email: <input type="text" name="femail">
   Fone:  <input type="text" name="ffone">
-  <input type="submit">
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 
 <?php
