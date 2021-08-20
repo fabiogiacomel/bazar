@@ -24,7 +24,7 @@ $senha = sha1("John");
 $stmt->execute();
 
 
-echo "New records created successfully";
+echo "Usuario Cadastrado";
 
 $stmt->close();
 $conn->close();
