@@ -24,7 +24,7 @@
 
 
 <div class="container" style="margin-top:30px">
-<form action="inserirUsuario.php">
+<form action=<?php echo $_SERVER['PHP_SELF']; ?>>
   
   <div class="form-group">
     <label for="nome">Digite seu Nome:</label>
