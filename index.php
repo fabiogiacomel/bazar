@@ -23,8 +23,9 @@
 const ids = [];
 document.getElementById("ids").innerHTML = ids;
 
-function addCarrinho(id, desc){
+function addCarrinho(id){
   ids.push(id);
+  document.getElementById("demo").innerHTML = ids.indexOf(id);
   document.getElementById("ids").innerHTML = ids.toString();
 }
 </script>
@@ -47,6 +48,7 @@ function addCarrinho(id, desc){
     <?php #require 'mensagens/01.php';?>
     
     <p id="ids"></p>
+    <p id="demo"></p>
 
   </div>
 
