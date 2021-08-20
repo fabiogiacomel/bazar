@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -12,24 +10,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
- <!-- <link href="img/ceep-touch-icon.jpg" rel="apple-touch-icon"> -->
- <script>
-  function addCarrinho1(id) {
-    document.getElementById("carrinho").innerHTML = id;
-  }
+  <!-- <link href="img/ceep-touch-icon.jpg" rel="apple-touch-icon"> -->
+  <script>
+    function addCarrinho1(id) {
+      document.getElementById("carrinho").innerHTML = id;
+    }
   </script>
 
-<script>
-const ids = [];
-document.getElementById("ids").innerHTML = ids;
+  <script>
+    const ids = [];
+    document.getElementById("ids").innerHTML = ids;
 
-function addCarrinho(id){
-  ids.push(id);
-  document.getElementById("ids").innerHTML = ids.toString();
-}
-</script>
+    function addCarrinho(id) {
+      ids.push(id);
+      document.getElementById("ids").innerHTML = ids.toString();
+    }
+  </script>
 
-<style>
+  <style>
     .fakeimg {
       height: 200px;
       background: #aaa;
@@ -40,40 +38,35 @@ function addCarrinho(id){
 
 <body>
 
-<?php
-session_start();
+  <?php
+  session_start();
 
-$acao = $_GET['acao'];
-$cod =  $_GET['cod'];
+  $acao = $_GET['acao'];
+  $cod =  $_GET['cod'];
 
-// Verificamos se a acao é igual a incluir
-if ($acao == "incluir")
-{    
-  require 'db/inserirPedido.php';
-   // Verificamos se cod do produto é diferente de vazio
-   if ($cod != '')
-   {
-       // Se for diferente de vazio verificamos se é numérico
-       if (is_numeric($cod))
-       {    
-           // Tratamos a variavel de caracteres indevidos
-           $cod = addslashes(htmlentities($cod));
-       }
+  // Verificamos se a acao é igual a incluir
+  if ($acao == "incluir") {
+    require 'db/inserirPedido.php';
+    // Verificamos se cod do produto é diferente de vazio
+    if ($cod != '') {
+      // Se for diferente de vazio verificamos se é numérico
+      if (is_numeric($cod)) {
+        // Tratamos a variavel de caracteres indevidos
+        $cod = addslashes(htmlentities($cod));
       }
     }
-?>
+  }
+  ?>
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
-    <?php #require 'mensagens/01.php';?>
-    
+    <?php #require 'mensagens/01.php';
+    ?>
+
     <p id="ids"></p>
     <p id="demo"></p>
 
   </div>
-
-  
-
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="row">
@@ -81,39 +74,44 @@ if ($acao == "incluir")
       <div class="col">
         <!-- Coluna -->
         <!-- Inserir bCadastro -->
-        <?php //require 'modal/bLogin.php';?>
+        <?php //require 'modal/bLogin.php';
+        ?>
       </div>
 
       <div class="col">
         <!-- Coluna -->
         <!-- Inserir bCadastro -->
-        <?php //require 'modal/bCadastro.php';?>
+        <?php //require 'modal/bCadastro.php';
+        ?>
       </div>
 
   </nav>
 
 
-  <?php //require 'modal/mLogin.php';?>
+  <?php //require 'modal/mLogin.php';
+  ?>
 
-  <?php //require 'modal/mCadastro.php';?>
+  <?php //require 'modal/mCadastro.php';
+  ?>
 
 
 
   <div class="container-fluid">
 
-  <?php require 'mensagens/m01.php';?>
+    <?php require 'mensagens/m01.php'; ?>
 
-  <?php require 'mensagens/produtos/mostrarProduto.php';?>
+    <?php require 'mensagens/produtos/mostrarProduto.php'; ?>
 
-  <?php #require 'mensagens/produtos/cardProdutos.php';?>
+    <?php #require 'mensagens/produtos/cardProdutos.php';
+    ?>
 
-    
+
 
   </div>
 
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
-  <?php require 'mensagens/02.php';?>
+    <?php require 'mensagens/02.php'; ?>
   </div>
 
   <script src="js/lib.js"></script>
