@@ -1,11 +1,11 @@
 <?php
             // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
             if (!empty($_POST) and (empty($_POST['usuario']) or empty($_POST['senha']))) {
-                header("Location: bazar.infoceep.com.br");
+                header("Location: http://bazar.infoceep.com.br/cadastro/login.php");
                 exit;
             }
             ?>
-            
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
