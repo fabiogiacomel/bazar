@@ -56,30 +56,21 @@ $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
-  // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $sql = "INSERT INTO  (nome)
+  VALUES ('teste')";
+  // use exec() because no results are returned
+  $conn->exec($sql);
+  echo "New record created successfully";
+} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
 }
 
-// prepare and bind
-$stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email,senha) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("ssss", $nome, $fone, $email, $senha);
-
-// set parameters and execute
-$idSessao = $a;
-//$idProduto = 10;
-$ip = $_SERVER["REMOTE_ADDR"];
-$cookie = $_COOKIE["PHPSESSID"];
-$data = date('d/m/Y');
-$stmt->execute();
-
-echo "Produto inserio no Pedido";
-
-$stmt->close();
-$conn->close();
+$conn = null;
 
 ?>
 
