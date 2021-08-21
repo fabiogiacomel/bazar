@@ -10,19 +10,24 @@ $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT nome FROM usuario");
-    $stmt->execute();
+$login = $_POST['login'];
+$senha = sha1($_POST['senha']);
 
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    echo $resutl;
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $stmt = $conn->prepare("SELECT nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
+  $stmt->execute();
+  
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  print_r($stmt->fetchAll());
+}
+catch(PDOException $e) {
+  //echo "Error: " . $e->getMessage();
+  echo "login Invalido";
 }
 $conn = null;
+
 ?>
 
 <!DOCTYPE html>
