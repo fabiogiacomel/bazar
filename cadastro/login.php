@@ -18,9 +18,7 @@ try {
 
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
-        echo $v;
-    }
+    echo $resutl;
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
