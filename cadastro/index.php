@@ -6,6 +6,7 @@
     Nome: <input type="text" name="fnome">
     Email: <input type="text" name="femail">
     Fone: <input type="text" name="ffone">
+    Senha: <input type="text" name="senha">
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
 
@@ -41,6 +42,16 @@
     }
   }
 
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $senha = $_POST['senha'];
+    if (empty($senha)) {
+      echo "Senha em Branco";
+    } else {
+      echo $senha;
+    }
+  }
+
   $servername = "localhost";
   $username = "u224722929_bazar";
   $password = "cA*di&1lVkZp";
@@ -49,8 +60,9 @@
   $nome =  $_POST['nome'];
   $fone =  $_POST['fone'];
   $email =  $_POST['email'];
+  $senha =  $_POST['senha'];
 
-  echo $nome, $fone, $email;
+  echo $nome, $fone, $email, $senha;
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -61,14 +73,8 @@
   }
 
   // prepare and bind
-  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email) VALUES (?, ?, ?)");
-  $stmt->bind_param("sss", $nome, $fone, $email);
-
-  // set parameters and execute
-  $idSessao = $a;
-  //$idProduto = 10;
-  $ip = $_SERVER["REMOTE_ADDR"];
-  $cookie = $_COOKIE["PHPSESSID"];
+  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha) VALUES (?, ?, ?, ?)");
+  $stmt->bind_param("ssss", $nome, $fone, $email, $senha);
   $stmt->execute();
 
   echo "Inserir Usuario";
@@ -76,8 +82,7 @@
   $stmt->close();
   $conn->close();
 
-
-  ?>
+?>
 
 </body>
 
