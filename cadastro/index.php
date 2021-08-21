@@ -51,35 +51,35 @@
     }
   }
 
-  $servername = "localhost";
-  $username = "u224722929_bazar";
-  $password = "cA*di&1lVkZp";
-  $dbname = "u224722929_bazar";
-
-  $nome =  $_POST['nome'];
-  $fone =  $_POST['fone'];
-  $email =  $_POST['email'];
-  $senha =  $_POST['senha'];
-
-  echo $nome, $fone, $email, $senha;
+$servername = "localhost";
+$username = "u224722929_bazar";
+$password = "cA*di&1lVkZp";
+$dbname = "u224722929_bazar";
 
   // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
-  // prepare and bind
-  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha) VALUES (?, ?, ?, ?)");
-  $stmt->bind_param("ssss", $nome, $fone, $email, $senha);
-  $stmt->execute();
+// prepare and bind
+$stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email,senha) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $nome, $fone, $email, $senha);
 
-  echo "Inserir Usuario";
+// set parameters and execute
+$idSessao = $a;
+//$idProduto = 10;
+$ip = $_SERVER["REMOTE_ADDR"];
+$cookie = $_COOKIE["PHPSESSID"];
+$data = date('d/m/Y');
+$stmt->execute();
 
-  $stmt->close();
-  $conn->close();
+echo "Produto inserio no Pedido";
+
+$stmt->close();
+$conn->close();
 
 ?>
 
