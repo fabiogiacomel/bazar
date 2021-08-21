@@ -67,7 +67,8 @@ try {
   }
 }
 catch(PDOException $e) {
-  echo "Error: " . $e->getMessage();
+  //echo "Error: " . $e->getMessage();
+  echo login Invalido
 }
 $conn = null;
 echo "</table>";
