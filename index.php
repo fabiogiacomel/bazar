@@ -41,11 +41,35 @@
   <?php
 
   $a = session_id();
-    if(empty($a)) {
-  
-    session_start();
-}
+  if (empty($a)) {
 
+    session_start();
+  }
+
+  $servername = "localhost";
+  $username = "u224722929_bazar";
+  $password = "cA*di&1lVkZp";
+  $dbname = "u224722929_bazar";
+
+
+  try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // prepare sql and bind parameters
+    $stmt = $conn->prepare("INSERT INTO acesso (ip, idsessao, data)  VALUES (:ip, :idsessao, :data)");
+    $stmt->bindParam(':ip', $ip);
+    $stmt->bindParam(':idsessao', $idsessao);
+    $stmt->bindParam(':data', $data);
+
+    if ($execSQL) $stmt->execute();
+
+    //echo "Usuario Cadastrato com Sucesso!!!";
+  } catch (PDOException $e) {
+    //echo "Error: " . $e->getMessage();
+  }
+  $conn = null;
 
   $acao = $_GET['acao'];
   $cod =  $_GET['cod'];
