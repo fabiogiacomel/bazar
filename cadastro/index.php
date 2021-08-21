@@ -83,6 +83,7 @@ try {
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':senha', $senha);
   
+  
   if($execSQL) $stmt->execute();
 
   echo "Usuario Cadastrato com Sucesso!!!";

@@ -51,6 +51,7 @@
   $password = "cA*di&1lVkZp";
   $dbname = "u224722929_bazar";
 
+  $execSQL = TRUE;
 
   try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -62,6 +63,11 @@
     $stmt->bindParam(':ip', $ip);
     $stmt->bindParam(':idsessao', $idsessao);
     $stmt->bindParam(':data', $data);
+
+    $ip = $_SERVER["REMOTE_ADDR"];
+    $idsessao = "";
+    $data = "";
+    $cookie = $_COOKIE["PHPSESSID"];
 
     if ($execSQL) $stmt->execute();
 
