@@ -1,3 +1,11 @@
+<?php
+            // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
+            if (!empty($_POST) and (empty($_POST['usuario']) or empty($_POST['senha']))) {
+                header("Location: bazar.infoceep.com.br");
+                exit;
+            }
+            ?>
+            
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -319,13 +327,7 @@
             </div>
 
             <!-- Login Form -->
-            <?php
-            // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-            if (!empty($_POST) and (empty($_POST['usuario']) or empty($_POST['senha']))) {
-                header("Location: login.php");
-                exit;
-            }
-            ?>
+
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
                 <input type="text" id="senha" class="fadeIn third" name="login" placeholder="senha">
