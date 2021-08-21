@@ -84,9 +84,11 @@ try {
   $stmt->bindParam(':senha', $senha);
   
   
-  if($execSQL) $stmt->execute();
+  if($execSQL) {
+    $stmt->execute();
 
-  echo "Usuario Cadastrato com Sucesso!!!";
+    echo "Usuario Cadastrato com Sucesso!!!";
+  }
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
