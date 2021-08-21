@@ -1,10 +1,31 @@
 <?php
-            // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
-            if (!empty($_POST) and (empty($_POST['usuario']) or empty($_POST['senha']))) {
-                header("Location: http://bazar.infoceep.com.br/cadastro/login.php");
-                exit;
-            }
-            ?>
+// Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
+if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
+    header("Location: http://bazar.infoceep.com.br/cadastro/login.php");
+    exit;
+}
+
+$servername = "localhost";
+$username = "u224722929_bazar";
+$password = "cA*di&1lVkZp";
+$dbname = "u224722929_bazar";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare("SELECT nome FROM usuario");
+    $stmt->execute();
+
+    // set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
+        echo $v;
+    }
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$conn = null;
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -336,7 +357,7 @@
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" href="cadastro.php">Cadastrar-se!</a>
+                <a class="underlineHover" href="cadastro.php">Quero me Cadastrar!</a>
             </div>
         </div>
     </div>
