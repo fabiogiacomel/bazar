@@ -13,7 +13,8 @@ try {
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     echo $result;
-    if ($result) != 1) {
+
+    if ($result != 1) {
         // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
         echo "Login inválido!"; exit;
     } else {
