@@ -33,8 +33,8 @@ $conn = null;
 
 */
 
-echo "<table style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
+echo "<table>";
+echo "<tr><th>Nome</th><th>Fone</th><th>email</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
   function __construct($it) {
@@ -42,7 +42,7 @@ class TableRows extends RecursiveIteratorIterator {
   }
 
   function current() {
-    return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+    return "<td>" . parent::current(). "</td>";
   }
 
   function beginChildren() {
@@ -57,7 +57,7 @@ class TableRows extends RecursiveIteratorIterator {
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->prepare("SELECT nome, fone, email FROM usuario WHERE email='$login'");
+  $stmt = $conn->prepare("SELECT nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha");
   $stmt->execute();
 
   // set the resulting array to associative
