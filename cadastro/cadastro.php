@@ -1,6 +1,6 @@
 <html>
 <body>
-<p> Seu pedido </p>
+<p> Seu Cadastro </p>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     Nome: <input type="text" name="fnome">
     Email: <input type="text" name="femail">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>My User Login Page - Bootsnipp.com</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         
@@ -293,7 +293,9 @@ input[type=text]:placeholder {
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="cadastro.php">Cadastrar-se!</a>
+    <a class="underlineHover" href="validacao.php">Login</a>
+
+    <a class="underlineHover" href="cadastro.php">Cadastrar-se!</a>
     </div>
   </div>
 </div>
