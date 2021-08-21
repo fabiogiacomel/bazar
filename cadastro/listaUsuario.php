@@ -12,7 +12,7 @@ try {
 
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    echo $resutl;
+    echo $result;
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
