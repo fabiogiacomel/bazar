@@ -281,21 +281,20 @@ input[type=text]:placeholder {
 
     <!-- Icon -->
     <div class="fadeIn first">
-    <h2>1º <span>Bazar</span><br>CEEP!</h2>
+    <h2>1º <span>Bazar</span>CEEP!</h2>
     </div>
 
     <!-- Login Form -->
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="text" id="senha" class="fadeIn third" name="login" placeholder="senha">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+      <a class="underlineHover" href="#">Cadastrar-se!</a>
     </div>
-
   </div>
 </div>
 <script type="text/javascript">
