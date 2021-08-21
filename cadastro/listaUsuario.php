@@ -33,39 +33,14 @@ $conn = null;
 
 */
 
-//echo "<table>";
-//echo "<tr><th>Nome</th><th>Fone</th><th>email</th></tr>";
-
-class TableRows extends RecursiveIteratorIterator {
-  function __construct($it) {
-    parent::__construct($it, self::LEAVES_ONLY);
-  }
-
-  function current() {
-    return "<td>" . parent::current(). "</td>";
-  }
-
-  function beginChildren() {
-    echo "<tr>";
-  }
-
-  function endChildren() {
-    echo "</tr>" . "\n";
-  }
-}
-
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $stmt = $conn->prepare("SELECT nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
   $stmt->execute();
+  
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   print_r($stmt->fetchAll());
-
-  // set the resulting array to associative
-  //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  //foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
- // }
 }
 catch(PDOException $e) {
   //echo "Error: " . $e->getMessage();
