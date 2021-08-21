@@ -3,13 +3,16 @@
 if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
     header("Location: http://bazar.infoceep.com.br/cadastro/login.php");
     exit;
-}
+} else {
 
+ 
 $servername = "localhost";
 $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
+$login = " ";
+$senha = " "; 
 
 $login = $_POST['login'];
 $senha = sha1($_POST['senha']);
@@ -29,7 +32,7 @@ catch(PDOException $e) {
   echo "login Invalido";
 }
 $conn = null;
-
+}
 ?>
 
 <!DOCTYPE html>
