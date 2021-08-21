@@ -81,7 +81,7 @@ try {
   $stmt->bindParam(':nome', $nome);
   $stmt->bindParam(':fone', $fone);
   $stmt->bindParam(':email', $email);
-  $stmt->bindParam(':senha', $senha);
+  $stmt->bindParam(':senha', sha1($senha));
   
   
   if($execSQL) {
