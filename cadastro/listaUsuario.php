@@ -59,6 +59,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $stmt = $conn->prepare("SELECT nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
   $stmt->execute();
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   print_r($stmt->fetchAll());
 
   // set the resulting array to associative
