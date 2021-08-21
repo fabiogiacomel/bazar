@@ -63,8 +63,7 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // prepare sql and bind parameters
-  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha)
-  VALUES (:firstname, :lastname, :email)");
+  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha)  VALUES (:nome, :fone, :email, :senha)");
   $stmt->bindParam(':nome', $nome);
   $stmt->bindParam(':fone', $fone);
   $stmt->bindParam(':email', $email);
