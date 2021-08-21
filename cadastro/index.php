@@ -61,14 +61,20 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = "INSERT INTO  usuario (nome) VALUES ('teste')";
-  // use exec() because no results are returned
-  $conn->exec($sql);
-  echo "New record created successfully";
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
-}
 
+  // prepare sql and bind parameters
+  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha)
+  VALUES (:firstname, :lastname, :email)");
+  $stmt->bindParam(':nome', $nome);
+  $stmt->bindParam(':fone', $fone);
+  $stmt->bindParam(':email', $email);
+  $stmt->bindParam(':senha', $senha);
+  $stmt->execute();
+
+  echo "Usuario Cadastrato com Sucesso!!!";
+} catch(PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
 $conn = null;
 
 ?>
