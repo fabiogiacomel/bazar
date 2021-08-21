@@ -27,7 +27,8 @@ try {
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   print_r($stmt->fetchAll());
     $dados[] = $stmt->fetchAll();
-        // Se a sessão não existir, inicia uma
+    /*   
+    // Se a sessão não existir, inicia uma
         if (!isset($_SESSION)) session_start();
 
         // Salva os dados encontrados na sessão
@@ -37,8 +38,8 @@ try {
         $_SESSION['UsuarioEmail'] = $dados['email'];
   
         // Redireciona o visitante
-        header("Location: restrito.php"); exit;
-
+        //        header("Location: restrito.php"); exit;
+*/
 }
 catch(PDOException $e) {
   //echo "Error: " . $e->getMessage();
