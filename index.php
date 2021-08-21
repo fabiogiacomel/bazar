@@ -59,14 +59,15 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // prepare sql and bind parameters
-    $stmt = $conn->prepare("INSERT INTO acesso (ip, idsessao, data)  VALUES (:ip, :idsessao, :data)");
+    $stmt = $conn->prepare("INSERT INTO acesso (ip, idsessao, data, cookie) VALUES (:ip, :idsessao, :data, :cookie)");
     $stmt->bindParam(':ip', $ip);
     $stmt->bindParam(':idsessao', $idsessao);
     $stmt->bindParam(':data', $data);
+    $stmt->bindParam(':cookie', $cookie);
 
     $ip = $_SERVER["REMOTE_ADDR"];
-    $idsessao = "";
-    $data = "";
+    $idsessao = session_id();
+    $data = date('d/m/Y');
     $cookie = $_COOKIE["PHPSESSID"];
 
     if ($execSQL) $stmt->execute();
