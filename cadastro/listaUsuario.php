@@ -33,8 +33,8 @@ $conn = null;
 
 */
 
-echo "<table>";
-echo "<tr><th>Nome</th><th>Fone</th><th>email</th></tr>";
+//echo "<table>";
+//echo "<tr><th>Nome</th><th>Fone</th><th>email</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
   function __construct($it) {
@@ -59,11 +59,11 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $stmt = $conn->prepare("SELECT nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
   $stmt->execute();
+  print_r($stmt->fetchAll());
 
   // set the resulting array to associative
-  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   //foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-    print_r($stmt->fetchAll());
  // }
 }
 catch(PDOException $e) {
