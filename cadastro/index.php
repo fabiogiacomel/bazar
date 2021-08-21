@@ -10,13 +10,18 @@
   </form>
 
   <?php
+
+  $execSQL = FALSE;
+
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
     $nome = $_POST['fnome'];
     if (empty($nome)) {
       echo "Nome em branco";
+      $execSQL = FALSE;
     } else {
       echo $nome;
+      $execSQL = TRUE;
     }
   }
 
@@ -25,9 +30,12 @@
     // collect value of input field
     $email = $_POST['femail'];
     if (empty($email)) {
+      $execSQL = FALSE;
       echo "Email em Branco";
     } else {
       echo $email;
+      $execSQL = TRUE;
+
     }
   }
 
@@ -35,9 +43,12 @@
     // collect value of input field
     $fone = $_POST['ffone'];
     if (empty($fone)) {
+      $execSQL = FALSE;
       echo "Fone em Branco";
     } else {
       echo $fone;
+      $execSQL = TRUE;
+
     }
   }
 
@@ -45,9 +56,12 @@
     // collect value of input field
     $senha = $_POST['senha'];
     if (empty($senha)) {
+      $execSQL = FALSE;
       echo "Senha em Branco";
     } else {
       echo $senha;
+      $execSQL = TRUE;
+
     }
   }
 
@@ -68,7 +82,8 @@ try {
   $stmt->bindParam(':fone', $fone);
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':senha', $senha);
-  $stmt->execute();
+  
+  if($execSQL) $stmt->execute();
 
   echo "Usuario Cadastrato com Sucesso!!!";
 } catch(PDOException $e) {
