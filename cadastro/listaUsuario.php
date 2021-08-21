@@ -63,7 +63,7 @@ try {
   // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   //foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-    print_r($result);
+    print_r($stmt->fetchAll());
  // }
 }
 catch(PDOException $e) {
