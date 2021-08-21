@@ -10,8 +10,10 @@ $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
+
 $login = $_POST['login'];
 $senha = sha1($_POST['senha']);
+echo $login, $senha;
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
