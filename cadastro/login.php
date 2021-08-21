@@ -5,29 +5,29 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
     exit;
 } else {
 
- 
-$servername = "localhost";
-$username = "u224722929_bazar";
-$password = "cA*di&1lVkZp";
-$dbname = "u224722929_bazar";
 
-$login = " ";
-$senha = " "; 
+    $servername = "localhost";
+    $username = "u224722929_bazar";
+    $password = "cA*di&1lVkZp";
+    $dbname = "u224722929_bazar";
 
-$login = $_POST['login'];
-$senha = sha1($_POST['senha']);
-echo $login, $senha;
+    $login = " ";
+    $senha = " ";
 
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->prepare("SELECT id, nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
-  $stmt->execute();
-  
-  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  print_r($stmt->fetchAll());
-    $dados[] = $stmt->fetchAll();
-    /*   
+    $login = $_POST['login'];
+    $senha = sha1($_POST['senha']);
+    echo $login, $senha;
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("SELECT id, nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
+        $stmt->execute();
+
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        print_r($stmt->fetchAll());
+        $dados[] = $stmt->fetchAll();
+   
     // Se a sessão não existir, inicia uma
         if (!isset($_SESSION)) session_start();
 
@@ -38,14 +38,12 @@ try {
         $_SESSION['UsuarioEmail'] = $dados['email'];
   
         // Redireciona o visitante
-        //        header("Location: restrito.php"); exit;
-*/
-}
-catch(PDOException $e) {
-  //echo "Error: " . $e->getMessage();
-  echo "login Invalido";
-}
-$conn = null;
+            header("Location: http://bazar.infoceep.com.br"); exit;
+    } catch (PDOException $e) {
+        //echo "Error: " . $e->getMessage();
+        echo "login Invalido";
+    }
+    $conn = null;
 }
 ?>
 
