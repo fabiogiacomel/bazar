@@ -27,7 +27,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         //print_r($stmt->fetchAll());
         //$dados = $stmt->fetchAll();
-        $dados = $stmt->fetchColumn(1);
+        $dados = $stmt->fetchColumn(0);
         echo $dados;
    
     // Se a sessão não existir, inicia uma
