@@ -26,7 +26,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
 
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         //print_r($stmt->fetchAll());
-        $dados[] = $stmt->fetchAll();
+        $dados[][] = $stmt->fetchAll();
 
         echo $dados[0][0];
    
