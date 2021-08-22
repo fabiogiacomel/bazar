@@ -39,14 +39,14 @@
 <body>
 
   <?php
-
+/*
   $a = session_id();
   if (empty($a)) {
 
    session_start();
    $a = session_id();
   }
-
+*/
 
   $servername = "localhost";
   $username = "u224722929_bazar";
