@@ -32,10 +32,10 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         if (!isset($_SESSION)) session_start();
 
         // Salva os dados encontrados na sessão
-        $_SESSION["UsuarioID"] = $dados[0];
-        $_SESSION["UsuarioNome"] = $dados[1];
+        $_SESSION["UsuarioID"] = $dados[0][0];
+        $_SESSION["UsuarioNome"] = $dados[0][1];
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
-        $_SESSION["UsuarioEmail"] = $dados[2];
+        $_SESSION["UsuarioEmail"] = $dados[0][2];
   
         // Redireciona o visitante
        //     header("Location: http://bazar.infoceep.com.br"); exit;
