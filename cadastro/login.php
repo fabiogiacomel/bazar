@@ -21,11 +21,13 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $conn->prepare("SELECT id, nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
         $stmt->execute();
+        $id = $stmt->fetchColumn(0);
 
         //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         //print_r($stmt->fetchAll());
         //$dados = $stmt->fetchAll();
-       // $id = $stmt->fetchColumn(0);
+        $stmt->execute();
+
         $nome = $stmt->fetchColumn(1);
         
    
