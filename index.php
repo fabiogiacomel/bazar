@@ -9,6 +9,10 @@
       session_destroy();
       // Redireciona o visitante de volta pro login
       header("Location: loja.php"); exit;
-  }
+  } 
+
+  echo $_SESSION['UsuarioID'];
+  echo $_SESSION['UsuarioID'];
+  
 
   ?>
