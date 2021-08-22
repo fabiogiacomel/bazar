@@ -44,7 +44,8 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         $_SESSION["UsuarioNome"] = $stmt->fetchColumn(1);
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
         $_SESSION["UsuarioEmail"] = $stmt->fetchColumn(2);
-
+        
+        echo $_SESSION["UsuarioID"], $_SESSION["UsuarioNome"], $_SESSION["UsuarioEmail"];
         // Redireciona o visitante
        //     header("Location: http://bazar.infoceep.com.br"); exit;
     } catch (PDOException $e) {
