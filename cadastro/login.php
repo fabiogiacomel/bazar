@@ -1,5 +1,5 @@
 <?php
-
+     if (!isset($_SESSION)) session_start();
 echo $_SESSION["UsuarioID"],
         $_SESSION["UsuarioNome"],
         $_SESSION["UsuarioEmail"];
