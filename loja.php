@@ -40,12 +40,12 @@
 
   <?php
 
-  #$a = session_id();
-  #if (empty($a)) {
+  $a = session_id();
+  if (empty($a)) {
 
-   # session_start();
-   # $a = session_id();
-  #}
+   session_start();
+   $a = session_id();
+  }
 
 
   $servername = "localhost";
