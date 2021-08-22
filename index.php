@@ -40,11 +40,13 @@
 
   <?php
 
-  $a = session_id();
-  if (empty($a)) {
+  #$a = session_id();
+  #if (empty($a)) {
 
-    session_start();
-  }
+   # session_start();
+   # $a = session_id();
+  #}
+
 
   $servername = "localhost";
   $username = "u224722929_bazar";
@@ -101,14 +103,14 @@
     <h1>1º Bazar de Lixo Eletrônico</h1>
 
     <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
-    
+
     <?php #require 'mensagens/01.php';
 
     ?>
 
-    <p id="ids"></p>
-    <p id="demo"></p>
-
+    <!--<p id="ids"></p>
+      <p id="demo"></p>
+    -->
   </div>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
