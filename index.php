@@ -99,7 +99,11 @@
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar de Lixo Eletrônico</h1>
+
+    <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
+    
     <?php #require 'mensagens/01.php';
+
     ?>
 
     <p id="ids"></p>
