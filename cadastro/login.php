@@ -16,7 +16,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
 
     $login = $_POST['login'];
     $senha = sha1($_POST['senha']);
-    echo $login, $senha;
+   // echo $login, $senha;
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -27,6 +27,8 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         print_r($stmt->fetchAll());
         $dados[] = $stmt->fetchAll();
+
+        echo $dados[0];
    
     // Se a sessão não existir, inicia uma
         if (!isset($_SESSION)) session_start();
