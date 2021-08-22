@@ -28,7 +28,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         //print_r($stmt->fetchAll());
         //$dados = $stmt->fetchAll();
         $id = $stmt->fetchColumn(0);
-
+        $nome = $stmt->fetchColumn(1);
         
    
     // Se a sessão não existir, inicia uma
@@ -36,7 +36,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
 
         // Salva os dados encontrados na sessão
         $_SESSION["UsuarioID"] = $id;
-        $_SESSION["UsuarioNome"] = $stmt->fetchColumn(1);
+        $_SESSION["UsuarioNome"] = $nome;
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
         $_SESSION["UsuarioEmail"] = $stmt->fetchColumn(2);
         
