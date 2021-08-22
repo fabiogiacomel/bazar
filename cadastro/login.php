@@ -28,7 +28,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         //print_r($stmt->fetchAll());
         //$dados = $stmt->fetchAll();
         $dados = $stmt->fetchColumn(1);
-        echo $dados[0];
+        echo $dados;
    
     // Se a sessão não existir, inicia uma
         if (!isset($_SESSION)) session_start();
