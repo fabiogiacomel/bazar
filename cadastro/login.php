@@ -25,7 +25,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         //print_r($stmt->fetchAll());
         //$dados = $stmt->fetchAll();
-        $id = $stmt->fetchColumn(0);
+       // $id = $stmt->fetchColumn(0);
         $nome = $stmt->fetchColumn(1);
         
    
