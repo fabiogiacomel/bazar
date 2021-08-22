@@ -19,17 +19,16 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT id, nome, fone, email FROM usuario WHERE email='$login' AND senha='$senha'");
+        $stmt = $conn->prepare("SELECT id, nome,  email, fone, FROM usuario WHERE email='$login' AND senha='$senha'");
+
         $stmt->execute();
         $id = $stmt->fetchColumn(0);
 
-        //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        //print_r($stmt->fetchAll());
-        //$dados = $stmt->fetchAll();
         $stmt->execute();
-
         $nome = $stmt->fetchColumn(1);
         
+        $stmt->execute();
+        $email = $stmt->fetchColumn(2);
    
     // Se a sessão não existir, inicia uma
         if (!isset($_SESSION)) session_start();
@@ -38,7 +37,7 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         $_SESSION["UsuarioID"] = $id;
         $_SESSION["UsuarioNome"] = $nome;
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
-        $_SESSION["UsuarioEmail"] = $stmt->fetchColumn(2);
+        $_SESSION["UsuarioEmail"] = $email;
         
         echo $_SESSION["UsuarioID"], $_SESSION["UsuarioNome"], $_SESSION["UsuarioEmail"];
         // Redireciona o visitante
