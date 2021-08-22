@@ -1,9 +1,4 @@
 <?php
-     if (!isset($_SESSION)) session_start();
-echo $_SESSION["UsuarioID"],
-        $_SESSION["UsuarioNome"],
-        $_SESSION["UsuarioEmail"];
-
 // Verifica se houve POST e se o usuário ou a senha é(são) vazio(s)
 if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
     header("Location: http://bazar.infoceep.com.br/cadastro/login.php");
@@ -32,15 +27,15 @@ if (!empty($_POST) and (empty($_POST['login']) or empty($_POST['senha']))) {
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         //print_r($stmt->fetchAll());
         //$dados = $stmt->fetchAll();
-        $dados = $stmt->fetchColumn(0);
+        $id = $stmt->fetchColumn(0);
 
-        echo $dados;
+        
    
     // Se a sessão não existir, inicia uma
         if (!isset($_SESSION)) session_start();
 
         // Salva os dados encontrados na sessão
-        $_SESSION["UsuarioID"] = $stmt->fetchColumn(0);
+        $_SESSION["UsuarioID"] = $id;
         $_SESSION["UsuarioNome"] = $stmt->fetchColumn(1);
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
         $_SESSION["UsuarioEmail"] = $stmt->fetchColumn(2);
