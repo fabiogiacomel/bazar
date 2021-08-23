@@ -76,12 +76,10 @@
 <?php
     if($_SESSION['UsuarioNome'] == ''){
     echo '<a href="http://bazar.infoceep.com.br/cadastro/" class="btn btn-warning">Cadastrar</a>';
-  
-      //iniciar o cadastro
-      // redirecionar para http://bazar.infoceep.com.br/cadastro/
-      //header("Location: http://bazar.infoceep.com.br/cadastro/"); 
-      //exit;
-    }
+  }else{
+    echo '<a href="http://bazar.infoceep.com.br/cadastro/logout.php" class="btn btn-warning">Sair</a>';
+
+  }
   ?>
     <p><?php echo $_SESSION['UsuarioNome']; ?>!</p>
 
