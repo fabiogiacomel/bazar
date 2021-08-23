@@ -27,6 +27,9 @@ $idUsuario =  $_SESSION["UsuarioID"];
   $stmt->bindParam(':data', $data);
   $stmt->bindParam(':idUsuario', $idUsuario);
   $stmt->execute();
+  echo "Reserva registrada!";
+} catch(PDOException $e) {
+  echo "Error: " . $e->getMessage();
 }
-
+$conn = null;
 ?>
