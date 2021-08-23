@@ -1,4 +1,6 @@
 <?php
+  if (!isset($_SESSION)) session_start();
+  
     $servername = "localhost";
     $username = "u224722929_bazar";
     $password = "cA*di&1lVkZp";
