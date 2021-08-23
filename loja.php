@@ -58,12 +58,7 @@
 
   // Verificamos se a acao é igual a incluir
   if ($acao == "incluir") {
-    if($_SESSION['UsuarioNome'] != ''){
-      //iniciar o cadastro
-      // redirecionar para http://bazar.infoceep.com.br/cadastro/
-      header("Location: http://bazar.infoceep.com.br/cadastro/"); 
-      exit;
-    }
+
     require 'db/inserirPedido.php';
     // Verificamos se cod do produto é diferente de vazio
     if ($cod != '') {
@@ -78,7 +73,16 @@
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar On-line de Informática </h1>
-
+<?php
+    if($_SESSION['UsuarioNome'] != ''){
+    echo '<p> Cadastrar </p>';
+  
+      //iniciar o cadastro
+      // redirecionar para http://bazar.infoceep.com.br/cadastro/
+      //header("Location: http://bazar.infoceep.com.br/cadastro/"); 
+      exit;
+    }
+  ?>
     <p><?php echo $_SESSION['UsuarioNome']; ?>!</p>
 
  </div>
