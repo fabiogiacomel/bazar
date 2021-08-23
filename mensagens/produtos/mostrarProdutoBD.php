@@ -38,7 +38,7 @@ try {
   foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
     if($i == 0) {
       $id = $v; 
-      echo '<h2>'.$v.'</h2></br>';
+//      echo '<h2>'.$v.'</h2></br>';
     }
     if($i == 1) {
       $id = $v; 
