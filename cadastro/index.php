@@ -22,10 +22,10 @@
 
 
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    Nome: <input type="text" name="fnome">
-    Email: <input type="text" name="femail">
-    Fone: <input type="text" name="ffone">
-    Senha: <input type="text" name="senha">
+    Nome: <input type="text" name="fnome"> </br></br>
+    Email: <input type="text" name="femail"></br></br>
+    Fone: <input type="text" name="ffone"></br></br>
+    Senha: <input type="text" name="senha"></br></br>
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
 
