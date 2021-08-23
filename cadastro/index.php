@@ -16,6 +16,7 @@
 <body>
 <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1> Cadastro </h1>
+    </div>
     <div class="container-fluid">
 
 
