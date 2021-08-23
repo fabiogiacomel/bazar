@@ -1,6 +1,6 @@
 <?php
-echo "<table style='border: solid 1px black;'>";
-echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
+  echo '<div class="table table-bordered justify-content-center align-items-center">';
+  echo '<div class="text-center">';
 
 class TableRows extends RecursiveIteratorIterator {
   function __construct($it) {
@@ -8,15 +8,15 @@ class TableRows extends RecursiveIteratorIterator {
   }
 
   function current() {
-    return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+    return " " . parent::current(). " ";
   }
 
   function beginChildren() {
-    echo "<tr>";
+    echo "<div>";
   }
 
   function endChildren() {
-    echo "</tr>" . "\n";
+    echo "</div>" . "\n";
   }
 }
 
@@ -40,7 +40,7 @@ try {
   echo "Error: " . $e->getMessage();
 }
 $conn = null;
-echo "</table>";
+echo "</div>";
 ?>
 
 
@@ -48,9 +48,7 @@ echo "</table>";
 
 
 
-<div appml-data="appml/produtos.js">
-  <div class="table table-bordered justify-content-center align-items-center" appml-repeat="records">
-    <div class="text-center">
+    
       </br>
       <h2>{{titulo}}</h2>
       <img src="ofertados/{{img}}" class="img-thumbnail mx-auto d-block img-fluid">
