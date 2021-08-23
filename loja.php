@@ -80,7 +80,7 @@
       //iniciar o cadastro
       // redirecionar para http://bazar.infoceep.com.br/cadastro/
       //header("Location: http://bazar.infoceep.com.br/cadastro/"); 
-      exit;
+      //exit;
     }
   ?>
     <p><?php echo $_SESSION['UsuarioNome']; ?>!</p>
