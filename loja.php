@@ -11,42 +11,18 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
   <!-- <link href="img/ceep-touch-icon.jpg" rel="apple-touch-icon"> -->
-  <script>
-    function addCarrinho1(id) {
-      document.getElementById("carrinho").innerHTML = id;
-    }
-  </script>
-
-  <script>
-    const ids = [];
-    document.getElementById("ids").innerHTML = ids;
-
-    function addCarrinho(id) {
-      ids.push(id);
-      document.getElementById("ids").innerHTML = ids.toString();
-    }
-  </script>
-
-  <style>
-    .fakeimg {
-      height: 200px;
-      background: #aaa;
-    }
-  </style>
-
 </head>
 
 <body>
 
   <?php
-/*
+
   $a = session_id();
   if (empty($a)) {
 
    session_start();
    $a = session_id();
   }
-*/
 
   $servername = "localhost";
   $username = "u224722929_bazar";
