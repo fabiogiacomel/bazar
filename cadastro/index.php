@@ -20,7 +20,7 @@
     <div class="container-fluid">
 
 
-
+  </br></br>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     Nome: <input type="text" name="fnome"> </br></br>
     Email: <input type="text" name="femail"></br></br>
@@ -28,7 +28,7 @@
     Senha: <input type="text" name="senha"></br></br>
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
-
+  </br></br>
   </div>
 
   <?php
