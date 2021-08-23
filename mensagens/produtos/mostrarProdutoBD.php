@@ -34,7 +34,7 @@ try {
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   
   $i=0;
-
+  $id = 0;
   foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
     if($i == 0) {
       $id = $v; 
@@ -71,7 +71,7 @@ try {
     
  
 
-    if($i == 7) {$i = 0;} else {$i++;}; 
+    if($i == 6) {$i = 0;} else {$i++;}; 
     
   }
 } catch(PDOException $e) {
