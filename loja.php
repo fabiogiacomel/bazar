@@ -76,6 +76,7 @@
 <?php
     if($_SESSION['UsuarioNome'] == ''){
     echo '<a href="http://bazar.infoceep.com.br/cadastro/" class="btn btn-warning">Cadastrar</a>';
+    echo '<a href="http://bazar.infoceep.com.br/cadastro/login.php" class="btn btn-primary">Logar</a>';
   }else{
     echo '<a href="http://bazar.infoceep.com.br/cadastro/logout.php" class="btn btn-warning">Sair</a>';
 
