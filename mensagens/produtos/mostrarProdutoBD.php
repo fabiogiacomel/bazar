@@ -61,17 +61,12 @@ try {
 
     if($i == 5) { 
       echo '<div class="alert alert-success"><strong><h3>'.$v.'</h3></strong></div>';
-    }
-
-    if($i == 6) { 
-
       echo '<ul class="nav nav-pills flex-column"><li class="nav-item"><a href="?acao=incluir&cod='.$id.'" class="btn btn-primary">Reservar (Começa na sexta)</a></li></ul>';
       echo '</div></br></div>';
     }
-    
- 
 
-    if($i == 6) {$i = 0;} else {$i++;}; 
+
+    if($i == 5) {$i = 0;} else {$i++;}; 
     
   }
 } catch(PDOException $e) {
