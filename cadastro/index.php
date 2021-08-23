@@ -14,21 +14,33 @@
 </head>
 
 <body>
-<div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
+  <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1> Cadastro </h1>
-    </div>
-    <div class="container-fluid">
+  </div>
+  <div class="container-fluid">
 
 
-  </br></br>
-  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    Nome:   <input type="text" name="fnome"> </br></br>
-    Email:  <input type="text" name="femail"></br></br>
-    Fone:   <input type="text" name="ffone"></br></br>
-    Senha:  <input type="text" name="senha"></br></br>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
-  </form>
-  </br></br>
+    </br></br>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+      <div class="form-group">
+        <label for="lblNome">Nome: </label>
+        <input type="text" name="fnome"> </br></br>
+      </div>
+      <div class="form-group">
+        <label for="lblEmail">Email: </label>
+        <input type="email" name="femail"></br></br>
+      </div>
+      <div class="form-group">
+        <label for="lblFone">Fone: </label>
+        <input type="text" name="ffone"></br></br>
+      </div>
+      <div class="form-group">
+        <label for="lblSenha">Senha: </label>
+        <input type="password" name="senha"></br></br>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+    </br></br>
   </div>
 
   <?php
@@ -57,7 +69,6 @@
     } else {
       //echo $email;
       $execSQL = TRUE;
-
     }
   }
 
@@ -70,7 +81,6 @@
     } else {
       //echo $fone;
       $execSQL = TRUE;
-
     }
   }
 
@@ -83,40 +93,39 @@
     } else {
       //echo $senha;
       $execSQL = TRUE;
-
     }
   }
 
-$servername = "localhost";
-$username = "u224722929_bazar";
-$password = "cA*di&1lVkZp";
-$dbname = "u224722929_bazar";
+  $servername = "localhost";
+  $username = "u224722929_bazar";
+  $password = "cA*di&1lVkZp";
+  $dbname = "u224722929_bazar";
 
 
-try {
-  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  // prepare sql and bind parameters
-  $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha)  VALUES (:nome, :fone, :email, :senha)");
-  $stmt->bindParam(':nome', $nome);
-  $stmt->bindParam(':fone', $fone);
-  $stmt->bindParam(':email', $email);
-  $stmt->bindParam(':senha', sha1($senha));
-  
-  
-  if($execSQL) {
-    $stmt->execute();
+    // prepare sql and bind parameters
+    $stmt = $conn->prepare("INSERT INTO usuario (nome, fone, email, senha)  VALUES (:nome, :fone, :email, :senha)");
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':fone', $fone);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':senha', sha1($senha));
 
-    echo "Usuario Cadastrato com Sucesso!!!";
+
+    if ($execSQL) {
+      $stmt->execute();
+
+      echo "Usuario Cadastrato com Sucesso!!!";
+    }
+  } catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
   }
-} catch(PDOException $e) {
-  echo "Error: " . $e->getMessage();
-}
-$conn = null;
+  $conn = null;
 
-?>
+  ?>
 
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
