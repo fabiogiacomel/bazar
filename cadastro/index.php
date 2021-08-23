@@ -112,7 +112,7 @@
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':fone', $fone);
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':senha', sha1($senha));
+    $stmt->bindParam(':senha', $senha);
 
 
     if ($execSQL) {

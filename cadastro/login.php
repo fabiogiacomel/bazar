@@ -8,7 +8,7 @@
     $senha = " ";
 
     $login = $_POST['login'];
-    $senha = sha1($_POST['senha']);
+    $senha = $_POST['senha'];
    // echo $login, $senha;
 
     try {
