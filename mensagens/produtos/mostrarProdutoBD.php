@@ -7,15 +7,15 @@ class TableRows extends RecursiveIteratorIterator {
 
   function current() {
 
-    return " " . parent::current(). " ";
+    return parent::current();
   }
 
   function beginChildren() {
-    echo "<div>";
+    //echo "<div>";
   }
 
   function endChildren() {
-    echo "</div>" . "\n";
+    //echo "</div>" . "\n";
   }
 }
 
