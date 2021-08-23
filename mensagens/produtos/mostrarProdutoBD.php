@@ -1,6 +1,4 @@
 <?php
-  echo '<div class="table table-bordered justify-content-center align-items-center">';
-  echo '<div class="text-center">';
 
 class TableRows extends RecursiveIteratorIterator {
   function __construct($it) {
@@ -16,7 +14,7 @@ class TableRows extends RecursiveIteratorIterator {
   }
 
   function endChildren() {
-    echo "</div></div>" . "\n";
+    echo "</div>" . "\n";
   }
 }
 
