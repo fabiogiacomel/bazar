@@ -369,13 +369,13 @@
 
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                <input type="text" id="senha" class="fadeIn third" name="senha" placeholder="senha">
+                <input type="password" id="senha" class="fadeIn third" name="senha" placeholder="senha">
                 <input type="submit" class="fadeIn fourth" value="Acessar">
             </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" href="cadastro.php">Quero me Cadastrar!</a>
+                <a class="underlineHover" href="http://bazar.infoceep.com.br/cadastro/">Quero me Cadastrar!</a>
             </div>
         </div>
     </div>
