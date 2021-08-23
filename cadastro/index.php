@@ -127,7 +127,7 @@
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
         $_SESSION["UsuarioEmail"] = $email;
   
-        echo'<a href="http://bazar.infoceep.com.br" class="btn btn-danger">Faça agora suas reservas!!!</a>'
+        echo'<a href="http://bazar.infoceep.com.br" class="btn btn-danger">Faça agora suas reservas!!!</a>';
     }
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
