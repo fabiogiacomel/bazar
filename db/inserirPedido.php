@@ -15,8 +15,8 @@ $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
 $dbname = "u224722929_bazar";
 
-$cod =  $_GET['cod'];
-
+$idProduto =  $_GET['cod'];
+/*
 switch ($cod) {
   case '1':
     $idProduto = 1;
@@ -61,7 +61,7 @@ switch ($cod) {
     $idProduto = 14;
     break;
 }
-
+*/
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -71,8 +71,8 @@ if ($conn->connect_error) {
 }
 
 // prepare and bind
-$stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip, cookie, data) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("issss", $idSessao, $idProduto, $ip, $cookie, $data);
+$stmt = $conn->prepare("INSERT INTO pedidos (idSessao, idProduto, ip, cookie, data, idUsuario ) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("issssi", $idSessao, $idProduto, $ip, $cookie, $data, $idUsuario);
 
 // set parameters and execute
 $idSessao = $a;
@@ -80,6 +80,7 @@ $idSessao = $a;
 $ip = $_SERVER["REMOTE_ADDR"];
 $cookie = $_COOKIE["PHPSESSID"];
 $data = date('d/m/Y');
+$idUsuario =  $_SESSION["UsuarioID"];
 $stmt->execute();
 
 echo "Produto inserio no Pedido";
