@@ -58,6 +58,12 @@
 
   // Verificamos se a acao é igual a incluir
   if ($acao == "incluir") {
+    if($_SESSION['UsuarioNome'] != ''){
+      //iniciar o cadastro
+      // redirecionar para http://bazar.infoceep.com.br/cadastro/
+      header("Location: http://bazar.infoceep.com.br/cadastro/"); 
+      exit;
+    }
     require 'db/inserirPedido.php';
     // Verificamos se cod do produto é diferente de vazio
     if ($cod != '') {
@@ -67,27 +73,7 @@
         $cod = addslashes(htmlentities($cod));
       }
     }
-  }
-
-    if ($acao == "reservar") {
-      //Verifica se foi feito o login
-      //if (!isset($_SESSION))
-      if($_SESSION['UsuarioNome'] != ''){
-        //iniciar o cadastro
-        // redirecionar para http://bazar.infoceep.com.br/cadastro/
-        header("Location: http://bazar.infoceep.com.br/cadastro/"); 
-        
-        exit;
-
-      }
-      require 'db/inserirPedido.php';
-      if ($cod != '') {
-        if (is_numeric($cod)) {
-          $cod = addslashes(htmlentities($cod));
-        }
-      }
-    }
-  
+  } 
   ?>
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
