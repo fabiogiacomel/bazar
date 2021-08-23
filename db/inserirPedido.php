@@ -12,7 +12,7 @@ try {
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   // set parameters and execute
-  $idSessao = $_SESSION;
+  $idSessao =  $_COOKIE["PHPSESSID"];
 //$idProduto = 10;
   $ip = $_SERVER["REMOTE_ADDR"];
 $cookie = $_COOKIE["PHPSESSID"];
