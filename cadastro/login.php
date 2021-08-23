@@ -14,7 +14,8 @@
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT id, nome,  email, fone, FROM usuario WHERE email='".$login."'");
+        $stmt = $conn->prepare("SELECT id, nome,  email, fone, FROM usuario WHERE email=:login);
+        $stmt->bindParam(':login', $login);
 
         $stmt->execute();
         $id = $stmt->fetchColumn(0);
