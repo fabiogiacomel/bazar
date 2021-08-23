@@ -145,7 +145,7 @@
 
     <?php require 'mensagens/m01.php'; ?>
 
-    <?php require 'mensagens/produtos/mostrarProduto.php'; ?>
+    <?php require 'mensagens/produtos/mostrarProdutoBD.php'; ?>
 
     <?php #require 'mensagens/produtos/cardProdutos.php';
     ?>
