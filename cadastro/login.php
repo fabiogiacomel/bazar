@@ -37,7 +37,7 @@
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
         $_SESSION["UsuarioEmail"] = $email;
         
-        echo $_SESSION["UsuarioID"], $_SESSION["UsuarioNome"], $_SESSION["UsuarioEmail"];
+//        echo $_SESSION["UsuarioID"], $_SESSION["UsuarioNome"], $_SESSION["UsuarioEmail"];
         // Redireciona o visitante
        //     header("Location: http://bazar.infoceep.com.br"); exit;
     } catch (PDOException $e) {

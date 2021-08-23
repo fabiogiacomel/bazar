@@ -119,6 +119,15 @@
       $stmt->execute();
 
       echo "Usuario Cadastrato com Sucesso!!!";
+      if (!isset($_SESSION)) session_start();
+      
+        // Salva os dados encontrados na sessão
+        $_SESSION["UsuarioID"] = $id;
+        $_SESSION["UsuarioNome"] = $nome;
+       // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
+        $_SESSION["UsuarioEmail"] = $email;
+  
+        echo'<a href="http://bazar.infoceep.com.br" class="btn btn-danger">Faça agora suas reservas!!!</a>'
     }
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
