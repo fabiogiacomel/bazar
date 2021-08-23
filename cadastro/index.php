@@ -1,6 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Bazar CEEP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
+  <!-- <link href="img/ceep-touch-icon.jpg" rel="apple-touch-icon"> -->
+</head>
+
 <body>
-<p> Seu pedido </p>
+<div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
+    <h1> Cadastro </h1>
+    <div class="container-fluid">
+
+
+
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     Nome: <input type="text" name="fnome">
     Email: <input type="text" name="femail">
@@ -8,6 +27,8 @@
     Senha: <input type="text" name="senha">
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
+
+  </div>
 
   <?php
 
@@ -95,6 +116,11 @@ try {
 $conn = null;
 
 ?>
+
+
+  <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
+    <?php require 'mensagens/02.php'; ?>
+  </div>
 
 </body>
 
