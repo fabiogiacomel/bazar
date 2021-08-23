@@ -76,7 +76,7 @@
   ?>
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
-    <h1>1º Bazar de Lixo Eletrônico</h1>
+    <h1>1º Bazar de Informática On-line</h1>
 
     <p><?php echo $_SESSION['UsuarioNome']; ?>!</p>
 
