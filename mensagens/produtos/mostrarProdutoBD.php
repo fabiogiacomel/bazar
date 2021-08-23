@@ -36,33 +36,41 @@ try {
   $i=0;
 
   foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-    if($i == 0) { 
+    if($i == 0) {
+      $id = $v; 
+      echo '<h2>'.$v.'</h2></br>';
+    }
+    if($i == 1) {
+      $id = $v; 
       echo '<h2>'.$v.'</h2></br>';
     }
 
-    if($i == 1) { 
+    if($i == 2) { 
       echo '<img src="ofertados/'.$v.'" class="img-thumbnail mx-auto d-block img-fluid">';
     }
 
-    if($i == 2) { 
+    if($i == 3) { 
       echo '<p>Quantidade: '.$v.'</p>';
     }
 
-    if($i == 3) { 
+    if($i == 4) { 
       echo '<h5>'.$v.'</h5>';
     }
 
-    if($i == 4) { 
+    if($i == 5) { 
       echo '<div class="alert alert-success"><strong><h3>'.$v.'</h3></strong></div>';
     }
 
-    if($i == 5) { 
+    if($i == 6) { 
 
-      echo '<ul class="nav nav-pills flex-column"><li class="nav-item"><a href="?acao=incluir&cod='.$v.'" class="btn btn-primary">Reservar (Começa na sexta)</a></li></ul>';
+      echo '<ul class="nav nav-pills flex-column"><li class="nav-item"><a href="?acao=incluir&cod='.$id.'" class="btn btn-primary">Reservar (Começa na sexta)</a></li></ul>';
       echo '</div></br></div>';
     }
-    if($i == 5) $i = 0; 
+    
     $i++;
+
+    if($i == 7) $i = 0; 
+    
   }
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
