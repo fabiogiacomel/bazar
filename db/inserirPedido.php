@@ -1,5 +1,6 @@
 <?php
 
+if (!isset($_SESSION)) session_start();
 $servername = "localhost";
 $username = "u224722929_bazar";
 $password = "cA*di&1lVkZp";
@@ -30,6 +31,7 @@ $idUsuario =  $_SESSION["UsuarioID"];
   echo "Reserva registrada!";
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
+  echo "Você deve se cadastar primeiro!";
 }
 $conn = null;
 ?>
