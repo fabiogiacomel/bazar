@@ -22,10 +22,10 @@
 
   </br></br>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    Nome: <input type="text" name="fnome"> </br></br>
-    Email: <input type="text" name="femail"></br></br>
-    Fone: <input type="text" name="ffone"></br></br>
-    Senha: <input type="text" name="senha"></br></br>
+    Nome:   <input type="text" name="fnome"> </br></br>
+    Email:  <input type="text" name="femail"></br></br>
+    Fone:   <input type="text" name="ffone"></br></br>
+    Senha:  <input type="text" name="senha"></br></br>
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </form>
   </br></br>
@@ -42,7 +42,7 @@
       echo "Nome em branco";
       $execSQL = FALSE;
     } else {
-      echo $nome;
+      //echo $nome;
       $execSQL = TRUE;
     }
   }
@@ -55,7 +55,7 @@
       $execSQL = FALSE;
       echo "Email em Branco";
     } else {
-      echo $email;
+      //echo $email;
       $execSQL = TRUE;
 
     }
@@ -68,7 +68,7 @@
       $execSQL = FALSE;
       echo "Fone em Branco";
     } else {
-      echo $fone;
+      //echo $fone;
       $execSQL = TRUE;
 
     }
@@ -81,7 +81,7 @@
       $execSQL = FALSE;
       echo "Senha em Branco";
     } else {
-      echo $senha;
+      //echo $senha;
       $execSQL = TRUE;
 
     }
@@ -120,7 +120,7 @@ $conn = null;
 
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
-    <?php require 'mensagens/02.php'; ?>
+
   </div>
 
 </body>
