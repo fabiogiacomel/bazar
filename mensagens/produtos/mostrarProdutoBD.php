@@ -51,11 +51,12 @@ try {
     }
 
     if($i == 3) { 
-      echo '<p>Quantidade: '.$v.'</p>';
+      echo '<h5>'.$v.'</h5>';
+     
     }
 
     if($i == 4) { 
-      echo '<h5>'.$v.'</h5>';
+      echo '<p>Quantidade: '.$v.'</p>';
     }
 
     if($i == 5) { 
