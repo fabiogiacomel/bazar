@@ -74,7 +74,7 @@
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <h1>1º Bazar On-line de Informática </h1>
 <?php
-    if($_SESSION['UsuarioNome'] != ''){
+    if($_SESSION['UsuarioNome'] == ''){
     echo '<p> Cadastrar </p>';
   
       //iniciar o cadastro
