@@ -38,7 +38,7 @@
         // Redireciona o visitante
        //     header("Location: http://bazar.infoceep.com.br"); exit;
     } catch (PDOException $e) {
-        //echo "Error: " . $e->getMessage();
+        echo "Error: " . $e->getMessage();
         echo "login Invalido";
     }
     $conn = null;
