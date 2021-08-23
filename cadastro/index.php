@@ -120,9 +120,9 @@
 
       echo "Usuario Cadastrato com Sucesso!!!";
       if (!isset($_SESSION)) session_start();
-      
+        $last_id = $conn->lastInsertId();
         // Salva os dados encontrados na sessão
-        $_SESSION["UsuarioID"] = $id;
+        $_SESSION["UsuarioID"] = $last_id;
         $_SESSION["UsuarioNome"] = $nome;
        // $_SESSION['UsuarioNivel'] = $resultado['nivel'];
         $_SESSION["UsuarioEmail"] = $email;
