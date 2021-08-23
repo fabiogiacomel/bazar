@@ -75,7 +75,7 @@
     <h1>1º Bazar On-line de Informática </h1>
 <?php
     if($_SESSION['UsuarioNome'] == ''){
-    echo '<p> Cadastrar </p>';
+    echo '<a href="http://bazar.infoceep.com.br/cadastro/" class="btn btn-primary">Cadastrar</a>';
   
       //iniciar o cadastro
       // redirecionar para http://bazar.infoceep.com.br/cadastro/
