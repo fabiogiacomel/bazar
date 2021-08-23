@@ -80,14 +80,7 @@
 
     <p><?php echo $_SESSION['UsuarioNome']; ?>!</p>
 
-    <?php #require 'mensagens/01.php';
-
-    ?>
-
-    <!--<p id="ids"></p>
-      <p id="demo"></p>
-    -->
-  </div>
+ </div>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="row">
@@ -122,21 +115,12 @@
     <?php require 'mensagens/m01.php'; ?>
 
     <?php require 'mensagens/produtos/mostrarProdutoBD.php'; ?>
-
-    <?php #require 'mensagens/produtos/cardProdutos.php';
-    ?>
-
-
-
   </div>
 
 
   <div class="jumbotron text-center bg-success text-white" style="margin-bottom:0">
     <?php require 'mensagens/02.php'; ?>
   </div>
-
-  <script src="js/lib.js"></script>
-  <script src="js/inserirPedido.js"></script>
 
 </body>
 
