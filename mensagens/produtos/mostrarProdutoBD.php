@@ -70,7 +70,7 @@ try {
     
  
 
-    if($i == 6) {$i = 0} else {$i++;}; 
+    if($i == 6) {$i = 0;} else {$i++;}; 
     
   }
 } catch(PDOException $e) {
