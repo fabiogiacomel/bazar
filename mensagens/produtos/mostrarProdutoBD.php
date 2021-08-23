@@ -40,28 +40,28 @@ try {
       echo '<h2>'.$v.'</h2></br>';
     }
 
-    if($i == 0) { 
+    if($i == 1) { 
       echo '<img src="ofertados/'.$v.'" class="img-thumbnail mx-auto d-block img-fluid">';
     }
 
-    if($i == 0) { 
+    if($i == 2) { 
       echo '<p>Quantidade: '.$v.'</p>';
     }
 
-    if($i == 0) { 
+    if($i == 3) { 
       echo '<h5>'.$v.'</h5>';
     }
 
-    if($i == 0) { 
+    if($i == 4) { 
       echo '<div class="alert alert-success"><strong><h3>'.$v.'</h3></strong></div>';
     }
 
-    if($i == 0) { 
+    if($i == 5) { 
 
       echo '<ul class="nav nav-pills flex-column"><li class="nav-item"><a href="?acao=incluir&cod='.$v.'" class="btn btn-primary">Reservar (Começa na sexta)</a></li></ul>';
       echo '</div></br></div>';
     }
-
+    if($i == 5) $i = 0; 
     $i++;
   }
 } catch(PDOException $e) {
