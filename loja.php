@@ -37,9 +37,9 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // prepare sql and bind parameters
-    $stmt = $conn->prepare("INSERT INTO acesso (ip, idsessao, data, cookie, hora) VALUES (:ip, :idsessao, :data, :cookie, :hora)");
+    $stmt = $conn->prepare("INSERT INTO acesso (ip, idSessao, data, cookie, hora) VALUES (:ip, :idSessao, :data, :cookie, :hora)");
     $stmt->bindParam(':ip', $ip);
-    $stmt->bindParam(':idsessao', $idsessao);
+    $stmt->bindParam(':idSessao', $idsessao);
     $stmt->bindParam(':data', $data);
     $stmt->bindParam(':cookie', $cookie);
     $stmt->bindParam(':hora', $hora);
