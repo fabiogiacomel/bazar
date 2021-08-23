@@ -39,13 +39,13 @@
     // prepare sql and bind parameters
     $stmt = $conn->prepare("INSERT INTO acesso (ip, idSessao, data, cookie, hora) VALUES (:ip, :idSessao, :data, :cookie, :hora)");
     $stmt->bindParam(':ip', $ip);
-    $stmt->bindParam(':idSessao', $idsessao);
+    $stmt->bindParam(':idSessao', $idSessao);
     $stmt->bindParam(':data', $data);
     $stmt->bindParam(':cookie', $cookie);
     $stmt->bindParam(':hora', $hora);
 
     $ip = $_SERVER["REMOTE_ADDR"];
-    $idsessao = session_id();
+    $idSessao = session_id();
     $data = date('d/m/Y');
     $cookie = $_COOKIE["PHPSESSID"];
     $hora = date('H:i:s');
