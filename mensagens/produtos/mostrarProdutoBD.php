@@ -70,15 +70,10 @@ try {
     
  
 
-    if($i == 6) {$i = 0;} else {$i++;}; 
+    if($i == 7) {$i = 0;} else {$i++;}; 
     
   }
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
 $conn = null;
-?>
-
-    
-    
-      
