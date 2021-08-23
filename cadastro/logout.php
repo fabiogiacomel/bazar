@@ -1,5 +1,5 @@
 <?php
       session_start(); // Inicia a sessão
       session_destroy(); // Destrói a sessão limpando todos os valores salvos
-      header("Location: cadastro/login.php"); exit; // Redireciona o visitante
+      header("Location: ../"); exit; // Redireciona o visitante
   ?>
