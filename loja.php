@@ -82,7 +82,7 @@
 
   }
   ?>
-    <p><?php echo $_SESSION['UsuarioNome']; ?>!</p>
+    <p><?php echo $_SESSION['UsuarioNome']; ?></p>
 
  </div>
 
