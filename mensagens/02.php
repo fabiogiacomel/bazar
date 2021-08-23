@@ -1,1 +1,1 @@
-<p>Todo o lucro será revertido em beneficio do CEEP</p>
+<p>Está com dúvidas mande um email para bazar@infoceep.com.br</p>
