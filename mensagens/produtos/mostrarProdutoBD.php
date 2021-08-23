@@ -68,9 +68,9 @@ try {
       echo '</div></br></div>';
     }
     
-    $i++;
+ 
 
-    if($i == 7) $i = 0; 
+    if($i == 6) {$i = 0} else {$i++;}; 
     
   }
 } catch(PDOException $e) {
