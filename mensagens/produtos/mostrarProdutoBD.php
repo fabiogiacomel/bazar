@@ -41,6 +41,8 @@ try {
 //      echo '<h2>'.$v.'</h2></br>';
     }
     if($i == 1) {
+      echo '<div class="table table-bordered justify-content-center align-items-center">';
+      echo '<div class="text-center">';
       echo '<h2>'.$v.'</h2></br>';
     }
 
