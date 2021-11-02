@@ -1,3 +1,8 @@
 SELECT produtos.id,produtos.titulo, produtos.descricao, COUNT(pedidos.idProduto) AS Total, produtos.valor
 FROM pedidos, produtos WHERE produtos.id = pedidos.idProduto
 GROUP BY pedidos.idProduto
+
+
+---------------------------------------------------------------------------------------------------------
+
+SELECT pedidos.id, pedidos.idProduto, produtos.titulo, usuario.nome  FROM pedidos, usuario, pedidos WHERE usuario.id=pedidos.idUsuario
